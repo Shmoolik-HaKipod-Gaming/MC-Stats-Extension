@@ -1,0 +1,13 @@
+{
+ "manifest_version": 2,
+ "name": "MC-Stats",
+ "description": "Minecraft player stats, with one little click.",
+ "version": "1.0.0",
+"browser_action": {
+   "default_icon": "diamondpick150.png",
+   "default_popup": "popup.html",
+   "default_title": "MC Stats"
+ },
+ "icons": { "48": "craftingtable48.png",
+          "128": "craftingtable128.png" }
+}
