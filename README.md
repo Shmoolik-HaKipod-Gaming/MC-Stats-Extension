@@ -1,2 +1,2 @@
 # MC-Stats-Extension
-Source code for my MC-Stats Chrome extension.
+Assets for my MC-Stats Chrome extension.
