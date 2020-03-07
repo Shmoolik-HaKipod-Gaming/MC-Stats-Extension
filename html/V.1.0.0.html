@@ -1,17 +1,6 @@
 <script>
-function pageLoad() {
-	showmore_btn = document.getElementById("showmore_btn");
-	more_servers = document.getElementById("moreservers");
-}
-
-var showmore_btn;
-var more_servers;
-pageLoad();
-while (more_servers == null) {
-	setTimeout(pageLoad, 500);
-	console.log("Executing PageLoad() function!");
-}
-more_servers.style.display = "none";
+showmore_btn = document.getElementById("showmore_btn");
+more_servers = document.getElementById("moreservers");
 
 function doStuff(server) {
 	playername = document.getElementById("player_name").value;
@@ -63,10 +52,10 @@ function additional_servers() {
 <input type="image" src="https://i.imgur.com/VQJW6XG.png" width=64 height=64 title="HiveMC" alt="HiveLogo" onclick="doStuff('hivemc')">
 <input type="image" src="https://pbs.twimg.com/profile_images/856649009984933888/Ju9mTICI_400x400.jpg" width=64 height=64 title="Wynncraft-Wynncraft" alt="WynnLogo" onclick="doStuff('wynncraft')">
 <input type="image" src="https://www.wynndata.tk/assets/images/nav/itemdb.png" width=64 height=64 title="Wynncraft-WynnData" alt="WynnDataLogo" onclick="doStuff('wynndata')"> <!-- OG resolution: 64x64 -->
-<div id="showmore_btn">
+<div id="showmore_btn" style="display: block">
 <br><a onclick="additional_servers()">>> Show more</a>
 </div>
-<div id="moreservers">
+<div id="moreservers" style="display: none">
 <input type="image" src="https://www.wynndata.tk/assets/images/nav/itemdb.png" width=64 height=64 title="Hypixel's 'The Pit' (pit.blue)" alt="pit.blue logo" onclick="doStuff('pitblue')"> <!-- OG resolution: 512x512 -->
 <input type="image" src="https://sky.lea.moe/resources/img/logo_square.png" width=64 height=64 title="Hypixel Skyblock" alt="SkyLeaMoe logo" onclick="doStuff('skyblock')">
 <br><a onclick="additional_servers()"><< Show less</a>
