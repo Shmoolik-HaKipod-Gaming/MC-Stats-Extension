@@ -1,7 +1,4 @@
 <script>
-showmore_btn = document.getElementById("showmore_btn");
-more_servers = document.getElementById("moreservers");
-
 function doStuff(server) {
 	playername = document.getElementById("player_name").value;
 	switch(server) {
@@ -33,6 +30,8 @@ function doStuff(server) {
 }
 
 function additional_servers() {
+	showmore_btn = document.getElementById("showmore_btn");
+	more_servers = document.getElementById("moreservers");
 	if (showmore_btn.style.display == "none") {
 		more_servers.style.display = "none";
 		showmore_btn.style.display = "block";
