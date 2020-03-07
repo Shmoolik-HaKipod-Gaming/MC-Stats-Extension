@@ -1,6 +1,16 @@
 <script>
-var showmore_btn = document.getElementById("showmore_btn");
-var more_servers = document.getElementById("moreservers");
+function pageLoad() {
+	showmore_btn = document.getElementById("showmore_btn");
+	more_servers = document.getElementById("moreservers");
+}
+
+var showmore_btn;
+var more_servers;
+pageLoad();
+while (more_servers == null) {
+	setTimeout(pageLoad, 500);
+	console.log("Executing PageLoad() function!");
+}
 more_servers.style.display = "none";
 
 function doStuff(server) {
