@@ -1,6 +1,6 @@
 <script>
-showmore_btn = document.getElementById("showmore_btn");
-more_servers = document.getElementById("more_servers");
+var showmore_btn = document.getElementById("showmore_btn");
+var more_servers = document.getElementById("moreservers");
 more_servers.style.display = "none";
 
 function doStuff(server) {
@@ -56,7 +56,7 @@ function additional_servers() {
 <div id="showmore_btn">
 <br><a onclick="additional_servers()">>> Show more</a>
 </div>
-<div id="more_servers">
+<div id="moreservers">
 <input type="image" src="https://www.wynndata.tk/assets/images/nav/itemdb.png" width=64 height=64 title="Hypixel's 'The Pit' (pit.blue)" alt="pit.blue logo" onclick="doStuff('pitblue')"> <!-- OG resolution: 512x512 -->
 <input type="image" src="https://sky.lea.moe/resources/img/logo_square.png" width=64 height=64 title="Hypixel Skyblock" alt="SkyLeaMoe logo" onclick="doStuff('skyblock')">
 <br><a onclick="additional_servers()"><< Show less</a>
