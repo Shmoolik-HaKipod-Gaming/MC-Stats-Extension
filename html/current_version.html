@@ -1,0 +1,64 @@
+<script>
+function doStuff(server) {
+	playername = document.getElementById("player_name").value;
+	switch(server) {
+		case "hypixel":
+			window.open("https://hypixel.net/player/" + playername);
+			break;
+		case "plancke":
+			window.open("https://plancke.io/hypixel/player/stats/" + playername);
+			break;
+		case "hivemc":
+			window.open("https://hivemc.com/player/" + playername);
+			break;
+		case "wynncraft":
+			window.open("https://wynncraft.com/stats/player/" + playername);
+			break;
+		case "wynndata":
+			window.open("https://www.wynndata.tk/stats/player/" + playername);
+			break;
+		case "pitblue":
+			window.open("https://pit.blue/profile?lookup=" + playername);
+			break;
+		case "skyblock":
+			window.open("https://sky.lea.moe/stats/" + playername);
+			break;
+		case "mineplex":
+			window.open("https://www.mineplex.com/players/" + playername);
+			break;
+	}
+}
+
+function additional_servers() {
+	showmore_btn = document.getElementById("showmore_btn");
+	more_servers = document.getElementById("moreservers");
+	if (showmore_btn.style.display == "none") {
+		more_servers.style.display = "none";
+		showmore_btn.style.display = "block";
+	} else {
+		more_servers.style.display = "block";
+		showmore_btn.style.display = "none";
+	}
+}
+</script>
+<center>
+<noscript><b>MC-STATS NEEDS JAVASCRIPT IN ORDER TO WORK.<br>PLEASE ENABLE JAVASCRIPT AND TRY AGAIN.<br></b></noscript>
+<input type="text" id="player_name" value="" placeholder="Player name">
+<br><br>
+<input type="image" src="https://avatars2.githubusercontent.com/u/3840546?s=400&v=4" width=64 height=64 title="Hypixel-Hypixel" alt="HypixelLogo" onclick="doStuff('hypixel')">
+<input type="image" src="https://plancke.io/favicon.ico" style="background-color: #3BAFDA" width=64 height=64 title="Hypixel-Plancke" alt="PlanckeLogo" onclick="doStuff('plancke')"><!-- OG resolution: 48x48 -->
+<input type="image" src="https://www.mineplex.com/assets/www-mp/img/footer/footer_smalllogo.png" width=64 height=64 title="Mineplex" alt="MineplexLogo" onclick="doStuff('mineplex')">
+<input type="image" src="https://i.imgur.com/VQJW6XG.png" width=64 height=64 title="HiveMC" alt="HiveLogo" onclick="doStuff('hivemc')">
+<input type="image" src="https://pbs.twimg.com/profile_images/856649009984933888/Ju9mTICI_400x400.jpg" width=64 height=64 title="Wynncraft-Wynncraft" alt="WynnLogo" onclick="doStuff('wynncraft')">
+<input type="image" src="https://www.wynndata.tk/assets/images/nav/itemdb.png" width=64 height=64 title="Wynncraft-WynnData" alt="WynnDataLogo" onclick="doStuff('wynndata')"> <!-- OG resolution: 64x64 -->
+<div id="showmore_btn" style="display: block">
+<a onclick="additional_servers()">>> Show more</a>
+</div>
+<div id="moreservers" style="display: none">
+<input type="image" src="https://pit.blue/res/favicon.png" width=64 height=64 title="Hypixel's 'The Pit' (pit.blue)" alt="pit.blue logo" onclick="doStuff('pitblue')"> <!-- OG resolution: 512x512 -->
+<input type="image" src="https://sky.lea.moe/resources/img/logo_square.png" width=64 height=64 title="Hypixel Skyblock" alt="SkyLeaMoe logo" onclick="doStuff('skyblock')">
+<br><a onclick="additional_servers()"><< Show less</a>
+</div>
+<!-- TODO Radio buttons- web version, API version -->
+Version 1.1.0 | <a href="changelog.html">Changelog</a>
+</center>
