@@ -1,3 +1,29 @@
+<!--
 <center><b><h3>
 You are using an old version of the MC-Stats extension which is no longer supported. Please update the extension from the Chrome Web Store.
 </h3></b></center>
+-->
+<script>
+function doStuff(server) {
+	playername = document.getElementById("player_name").value;
+	if (server == "hypixel") {
+		window.open("https://hypixel.net/player/" + playername);
+	} else if (server == "plancke") {
+		window.open("https://plancke.io/hypixel/player/stats/" + playername);
+	} else if (server == "hivemc") {
+		window.open("https://hivemc.com/player/" + playername);
+	} else if (server == "wynncraft") {
+		window.open("https://wynncraft.com/stats/player/" + playername);
+	}
+}
+</script>
+<center>
+<noscript><b>MC-STATS NEEDS JAVASCRIPT IN ORDER TO WORK.<br>PLEASE ENABLE JAVASCRIPT AND TRY AGAIN.<br></b></noscript>
+<input type="text" id="player_name" value="" placeholder="Player name">
+<br><br>
+<input type="image" src="https://avatars2.githubusercontent.com/u/3840546?s=400&v=4" width=60 height=60 title="Hypixel-Hypixel" alt="HypixelLogo" onclick="doStuff('hypixel')">
+<input type="image" src="https://avatars2.githubusercontent.com/u/3840546?s=400&v=4" width=60 height=60 title="Hypixel-Plancke" alt="PlanckeLogo" onclick="doStuff('plancke')">
+<!-- TODO Find a better image for Plancke -->
+<input type="image" src="https://i.imgur.com/VQJW6XG.png" width=60 height=60 title="HiveMC" alt="HiveLogo" onclick="doStuff('hivemc')">
+<input type="image" src="https://pbs.twimg.com/profile_images/856649009984933888/Ju9mTICI_400x400.jpg" width=60 height=60 title="Wynncraft" alt="WynnLogo" onclick="doStuff('wynncraft')">
+</center>
